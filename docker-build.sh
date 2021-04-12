@@ -1,4 +1,9 @@
 #!/bin/sh
+echo "Wrapping gradle"
+graddle wrapper
+echo "Clean and Assemble artifacts"
+./gradlew clean assemble
+echo "Building Docker Image"
 docker build . -t mn-pricing
 echo
 echo
